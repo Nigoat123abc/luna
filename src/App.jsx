@@ -10,39 +10,38 @@ import { Search, Home, Download, MessageCircle, BookOpen } from "lucide-react";
  */
 
 const CREATION_DATE = "2025-11-09";
-const AUTHOR = "Made by Me";
+const AUTHOR = "Cracked by Me";
 
 const GAMES = [
   {
-    id: "cyber-drift",
-    title: "Cyber Drift",
-    subtitle: "Futuristic neon racing",
+    id: "Hello Neighbor",
+    title: "Hello Neighbor",
+    subtitle: "Hello Neighbor is a Stealth Horror Game about sneaking into your neighbor's house and figuring out what he's hiding in the basement. Play against an advanced AI that learns from your actions.",
     description:
-      "High-speed futuristic racing with neon lights, tight handling and online leaderboards.",
+      "Hello Neighbor is a Stealth Horror Game about sneaking into your neighbor's house and figuring out what he's hiding in the basement. Play against an advanced AI that learns from your actions.",
     image:
-      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1400&q=60",
+      "https://upload.wikimedia.org/wikipedia/en/5/59/Hello_Neighbor_Cover_Art.jpg",
     video: "", // set to "/files/cyber-drift-preview.mp4" if you have a preview video
     platform: "Windows",
     version: "v1.2.0",
-    views: 1234,
-    author: "Luna Studios",
-    releaseDate: "2025-10-01",
-    downloadUrl: "/files/cyber-drift.zip",
+    views: "idk",
+    author: "someone",
+    releaseDate: "like 2017 i dont remember",
+    downloadUrl: "https://mega.nz/file/7gxAgTwA#fX8eAg0TdfwknH5E6SpRzBJrD3MK2MF578001y6ZPYA",
     tutorial: [
       {
         title: "Installation",
         steps: [
-          "Download the ZIP file.",
-          "Extract to a folder.",
-          "Run installer.exe and follow the prompts.",
+          "Download qBitorrent",
+          "put your file in qbitorrent and wait for the download to finish",
+          "after it finishes run the exe file",
         ],
       },
       {
         title: "First launch",
         steps: [
           "Open the game from the desktop shortcut.",
-          "Set resolution in Settings → Display.",
-          "Sign up for an online account if you want leaderboards.",
+          "enjoy and join my discord server",
         ],
       },
     ],
@@ -59,7 +58,7 @@ const GAMES = [
     platform: "Windows",
     version: "v0.9.4",
     views: 842,
-    author: "Luna Collective",
+    : "Luna Collective",
     releaseDate: "2025-08-16",
     downloadUrl: "/files/moon-raiders.zip",
     tutorial: [
@@ -111,17 +110,7 @@ export default function App() {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search games, keywords..."
                 className="pl-10 pr-4 py-2 rounded-xl bg-zinc-800 text-sm border border-zinc-700 focus:border-indigo-500 outline-none"
-              />
-            </div>
-            <a
-              href="#"
-              className="px-4 py-2 rounded-lg bg-indigo-600 hover:brightness-105 text-white text-sm"
-            >
-              Sign in
-            </a>
-          </div>
-        </div>
-      </motion.header>
+            
 
       {/* HERO + GRID */}
       <main className="max-w-6xl mx-auto px-6 py-10">
@@ -262,7 +251,7 @@ export default function App() {
                         <li><strong>Version:</strong> {selected.version}</li>
                         <li><strong>Platform:</strong> {selected.platform}</li>
                         <li><strong>Views:</strong> {selected.views}</li>
-                        <li><strong>Published by:</strong> {selected.author}</li>
+                        <li><strong>Published by:</strong> {selected.}</li>
                       </ul>
                     </div>
 
@@ -276,7 +265,7 @@ export default function App() {
                       </a>
 
                       <a
-                        href="https://discord.gg/YOUR_INVITE"
+                        href="https://discord.gg/qvGeqEpwfw"
                         target="_blank"
                         rel="noreferrer"
                         className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 text-zinc-200 hover:bg-zinc-800/70"

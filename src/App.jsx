@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Home, Download, MessageCircle, BookOpen } from "lucide-react";
 
 /**
- * Luna - Game catalog + detail modal
- *
- * IMPORTANT:
- * - Set downloadUrl to real, legal file URLs (GitHub / Netlify public / Cloud storage).
- * - Do NOT host copyrighted/cracked content.
+ * Luna - English storefront (detail modal, video/image preview, download, Discord)
+ * - Replace downloadUrl values with your real file URLs
+ * - Replace the Discord invite link below with your invite
+ * - "Made by Me" and creation date shown in the sidebar/footer
  */
+
+const CREATION_DATE = "2025-11-09";
+const AUTHOR = "Made by Me";
 
 const GAMES = [
   {
@@ -19,8 +21,7 @@ const GAMES = [
       "High-speed futuristic racing with neon lights, tight handling and online leaderboards.",
     image:
       "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1400&q=60",
-    // video can be mp4 hosted publicly; fallback to image shown if browser doesn't autoplay
-    video: "", // e.g. "/files/cyber-drift-preview.mp4" or a public https url
+    video: "", // set to "/files/cyber-drift-preview.mp4" if you have a preview video
     platform: "Windows",
     version: "v1.2.0",
     views: 1234,
@@ -98,7 +99,7 @@ export default function App() {
             <Home className="w-6 h-6 text-indigo-400" />
             <div>
               <div className="text-lg font-semibold text-indigo-300">Luna</div>
-              <div className="text-xs text-zinc-400">Storefront</div>
+              <div className="text-xs text-zinc-400">Storefront • Downloads</div>
             </div>
           </div>
 
@@ -111,6 +112,16 @@ export default function App() {
                 placeholder="Search games, keywords..."
                 className="pl-10 pr-4 py-2 rounded-xl bg-zinc-800 text-sm border border-zinc-700 focus:border-indigo-500 outline-none"
               />
+            </div>
+            <a
+              href="#"
+              className="px-4 py-2 rounded-lg bg-indigo-600 hover:brightness-105 text-white text-sm"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+      </motion.header>
 
       {/* HERO + GRID */}
       <main className="max-w-6xl mx-auto px-6 py-10">
@@ -119,7 +130,7 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-indigo-300 mb-6"
         >
-          Recent games
+          Recent Games
         </motion.h1>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -242,16 +253,16 @@ export default function App() {
                     <div className="bg-zinc-900/40 p-4 rounded-lg border border-zinc-800">
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-sm text-zinc-400">Details</div>
+                          <div className="text-sm text-zinc-400">Resource information</div>
                         </div>
                         <div className="text-xs text-zinc-400">{selected.releaseDate}</div>
                       </div>
 
                       <ul className="mt-3 text-sm text-zinc-300 space-y-2">
                         <li><strong>Version:</strong> {selected.version}</li>
-                        <li><strong>Plateforme:</strong> {selected.platform}</li>
-                        <li><strong>Vu Téléchargeres:</strong> {selected.views}</li>
-                        <li><strong>Publié par:</strong> {selected.author}</li>
+                        <li><strong>Platform:</strong> {selected.platform}</li>
+                        <li><strong>Views:</strong> {selected.views}</li>
+                        <li><strong>Published by:</strong> {selected.author}</li>
                       </ul>
                     </div>
 
@@ -265,12 +276,12 @@ export default function App() {
                       </a>
 
                       <a
-                        href="https://discord.gg/YOUR_INVITE" // replace with your invite
+                        href="https://discord.gg/YOUR_INVITE"
                         target="_blank"
                         rel="noreferrer"
                         className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 text-zinc-200 hover:bg-zinc-800/70"
                       >
-                        <MessageCircle className="w-4 h-4" /> join our discord server
+                        <MessageCircle className="w-4 h-4" /> Join our Discord
                       </a>
 
                       <a
@@ -282,13 +293,13 @@ export default function App() {
                         }}
                         className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 text-zinc-200 hover:bg-zinc-800/70"
                       >
-                        <BookOpen className="w-4 h-4" /> Get Help
+                        <BookOpen className="w-4 h-4" /> FAQ / Help
                       </a>
                     </div>
 
-                    <div className="text-xs text-zinc-500">
-                      <div>Serveur: Luna Public</div>
-                      <div className="mt-2">join our discord server please to support us</div>
+                    <div className="text-xs text-zinc-400">
+                      <div>{AUTHOR}</div>
+                      <div className="mt-2">Created: {CREATION_DATE}</div>
                     </div>
                   </div>
                 </aside>
@@ -308,7 +319,7 @@ export default function App() {
       </AnimatePresence>
 
       <footer className="mt-12 py-8 text-center text-zinc-500 text-sm">
-        © {new Date().getFullYear()} Luna.
+        © {new Date().getFullYear()} Luna — {AUTHOR} • Created {CREATION_DATE}
       </footer>
     </div>
   );

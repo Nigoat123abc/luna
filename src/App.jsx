@@ -98,7 +98,7 @@ export default function App() {
             <Home className="w-6 h-6 text-indigo-400" />
             <div>
               <div className="text-lg font-semibold text-indigo-300">Luna</div>
-              <div className="text-xs text-zinc-400">Storefront • Legal downloads</div>
+              <div className="text-xs text-zinc-400">Storefront</div>
             </div>
           </div>
 
@@ -111,16 +111,6 @@ export default function App() {
                 placeholder="Search games, keywords..."
                 className="pl-10 pr-4 py-2 rounded-xl bg-zinc-800 text-sm border border-zinc-700 focus:border-indigo-500 outline-none"
               />
-            </div>
-            <a
-              href="#"
-              className="px-4 py-2 rounded-lg bg-indigo-600 hover:brightness-105 text-white text-sm"
-            >
-              Sign in
-            </a>
-          </div>
-        </div>
-      </motion.header>
 
       {/* HERO + GRID */}
       <main className="max-w-6xl mx-auto px-6 py-10">
@@ -252,7 +242,7 @@ export default function App() {
                     <div className="bg-zinc-900/40 p-4 rounded-lg border border-zinc-800">
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-sm text-zinc-400">Informations sur la ressource</div>
+                          <div className="text-sm text-zinc-400">Details</div>
                         </div>
                         <div className="text-xs text-zinc-400">{selected.releaseDate}</div>
                       </div>
@@ -260,7 +250,7 @@ export default function App() {
                       <ul className="mt-3 text-sm text-zinc-300 space-y-2">
                         <li><strong>Version:</strong> {selected.version}</li>
                         <li><strong>Plateforme:</strong> {selected.platform}</li>
-                        <li><strong>Vues:</strong> {selected.views}</li>
+                        <li><strong>Vu Téléchargeres:</strong> {selected.views}</li>
                         <li><strong>Publié par:</strong> {selected.author}</li>
                       </ul>
                     </div>
@@ -271,7 +261,7 @@ export default function App() {
                         download
                         className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-indigo-600 rounded-lg text-white font-medium hover:brightness-105"
                       >
-                        <Download className="w-4 h-4" /> Télécharger
+                        <Download className="w-4 h-4" /> Download
                       </a>
 
                       <a
@@ -280,7 +270,7 @@ export default function App() {
                         rel="noreferrer"
                         className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 text-zinc-200 hover:bg-zinc-800/70"
                       >
-                        <MessageCircle className="w-4 h-4" /> Rejoindre notre Discord
+                        <MessageCircle className="w-4 h-4" /> join our discord server
                       </a>
 
                       <a
@@ -292,13 +282,13 @@ export default function App() {
                         }}
                         className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 text-zinc-200 hover:bg-zinc-800/70"
                       >
-                        <BookOpen className="w-4 h-4" /> FAQ / Aide
+                        <BookOpen className="w-4 h-4" /> Get Help
                       </a>
                     </div>
 
                     <div className="text-xs text-zinc-500">
                       <div>Serveur: Luna Public</div>
-                      <div className="mt-2">⚠️ Only host and distribute content you have rights to.</div>
+                      <div className="mt-2">join our discord server please to support us</div>
                     </div>
                   </div>
                 </aside>
@@ -318,7 +308,7 @@ export default function App() {
       </AnimatePresence>
 
       <footer className="mt-12 py-8 text-center text-zinc-500 text-sm">
-        © {new Date().getFullYear()} Luna — legal downloads only.
+        © {new Date().getFullYear()} Luna.
       </footer>
     </div>
   );
